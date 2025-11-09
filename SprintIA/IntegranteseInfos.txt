@@ -1,0 +1,24 @@
+Gabriel Costa Solano - RM562325
+
+Leandro Guarido - RM561760
+
+Kaiky Pereira Rodrigues da Silva - RM564578
+
+Este projeto contém dois modelos de Machine Learning treinados a partir de um dataset simulado (mock) sobre teleconsultas.
+
+1.  modelo_regressao.joblib:
+    -   Objetivo: Prever a frequência (número de dias) que um paciente faltará ao teleatendimento.
+    -   Tipo de Modelo: Regressão (LinearRegression).
+    -   Features Usadas: 'idade', 'distancia_km', 'historico_faltas_total'.
+    -   Performance (R²): (Cole aqui o valor do R² que apareceu na Célula 8 do seu Colab).
+
+2.  modelo_classificacao.joblib:
+    -   Objetivo: Classificar um paciente como 'Jovem Adulto' ou 'Idoso'.
+    -   Tipo de Modelo: Classificação (DecisionTreeClassifier).
+    -   Features Usadas: 'dias_faltas', 'distancia_km', 'historico_faltas_total'.
+    -   Performance (Acurácia): (Cole aqui o valor da Acurácia que apareceu na Célula 12 do seu Colab).
+
+API REST (Arquivo app.py):
+-   O modelo 'modelo_classificacao.joblib' foi disponibilizado em uma API REST usando Flask.
+-   A API recebe um JSON com os dados do paciente (dias_faltas, distancia_km, historico_faltas_total).
+-   Ela retorna a previsão da faixa etária (ex: {"previsao_faixa_etaria": "Jovem Adulto"}).
